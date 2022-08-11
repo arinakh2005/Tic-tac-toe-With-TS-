@@ -40,6 +40,15 @@ export class GameMap {
         //     0 - create new game area
         //     1 - resume game area
         let tempAllCells = [];
+
+        if (this.size > 30) {
+            document.querySelector('table').style.setProperty('--heightForCell', '2em');
+        } else if (this.size > 45) {
+            document.querySelector('table').style.setProperty('--heightForCell', '1em');
+        } else if (this.size > 50) {
+            document.querySelector('table').style.setProperty('--heightForCell', '0.3em');
+        }
+
         const table = document.querySelector('table');
         for (let i = 0; i < this.size; i++) {
             const tr = document.createElement('tr');

@@ -5,6 +5,8 @@
     --secondary-violet: #D8BFD8;
     --violet: #6C3483;
     --grey: rgb(168, 148, 167);
+    --heightForCell: 5em;
+    --widthForCell: 5em;
 }
 
 body {
@@ -25,17 +27,18 @@ h1 {
 table {
     margin: 1.5em 2em;
     border-collapse: separate;
+    /*display: grid;*/
+    /*justify-content: center;*/
 }
 
 .game-area {
     visibility: hidden;
 }
 
-table,
 th,
 td {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20%;
     text-align: center;
     color: transparent;
     text-shadow: 0 0 0 black;
@@ -43,13 +46,8 @@ td {
 
 td {
     background-color: var(--secondary-violet);
-    width: 5em;
-    height: 5em;
-}
-
-.cell {
-    min-width: 5%;
-    min-height: 5%;
+    width: var(--widthForCell);
+    height: var(--heightForCell);
 }
 
 .cell:hover {
@@ -61,7 +59,7 @@ td {
 }
 
 img {
-    max-width: 95%;
+    max-width: 90%;
     object-fit: cover;
 }
 
